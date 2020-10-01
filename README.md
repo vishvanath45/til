@@ -67,4 +67,23 @@ do {
 ```
 
 ---
+If you need to remove the last commit but want to maintain changes ?
+```
+git reset --soft HEAD^
+```
+---
+
+If you need to ever create a foreign relation while creating a postgres migration, don't forget to include `ON DELETE CASCADE` you can't do it later, later you would need to delete child first then parent, and it would be tedious.
+
+---
+
+whenever you create a unique constraint on table something like 
+
+```
+ALTER TABLE school_timing
+    ADD CONSTRAINT unique_row_school_times UNIQUE (school_id,school_city, start_time);
+```
+make sure to create a unique index on such combination while writing migration file, other we will fall into this error https://stackoverflow.com/a/54169587/6451546, in laymen terms, in above sample example, if you have a row with (school_id_A, lucknow, "08:00") and you delete it, later you can't add a row with same info, you would get not unique etc. error.
+---
+
 
