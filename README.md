@@ -136,9 +136,20 @@ how/when to use git cherry-pick?
 you have multiple feature branch (fa, fb, fc) with multiple commits in each, you can't just simple merge them, as they will bring their own history, one way is to squash but you will have  merge commit,which doesn't looknice...
 
 
-you can do `git cherry-pick <commit hash of top commit on f-a>` simialr for merging f-b and f-c
+you can do `git cherry-pick <commit hash of top commit on f-a>` similar for merging f-b and f-c
 
 keep master clean.
 
-```
+---
 
+Use `git rebase --onto` to rebase on any commit fromany commit on any branch, a really very good articl e https://womanonrails.com/git-rebase-onto
+
+---
+Search through all changes using `git log -S`
+---
+
+Use `git bisect` to find when was first time a bug was introduced, such a beautiful tool.
+https://git-scm.com/docs/git-bisect
+
+---
+ 
