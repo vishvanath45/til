@@ -86,4 +86,18 @@ ALTER TABLE school_timing
 make sure to create a unique index on such combination while writing migration file, other we will fall into this error https://stackoverflow.com/a/54169587/6451546, in laymen terms, in above sample example, if you have a row with (school_id_A, lucknow, "08:00") and you delete it, later you can't add a row with same info, you would get not unique etc. error.
 ---
 
+to go to first line in file in vi `1 + G` mind the capital G
+
+to go to end of file  `G` mind the capital G.
+---
+
+to commit only one file from list of staged files in git
+`git commit --only filename` OR `git commit filename`
+---
+visualize your git repo:
+
+`git log --oneline --abbrev-commit --all --graph`
+
+---
+
 
