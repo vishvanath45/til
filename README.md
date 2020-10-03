@@ -100,4 +100,45 @@ visualize your git repo:
 
 ---
 
+in some name insensitive OS like mac, if you use `mv` to rename a file, it won't show any diff in git status, use `git mv` instead
+
+---
+
+one can use `printf`in placeof `echo`, since behaviour of `echo` isn't consistant among versions, example try outputting `\n`
+
+---
+
+change date of git commit `git commit --amend --no-edit --date "4 Oct 1987"`
+
+---
+
+a useful git command `git rebase -i HEAD~5
+
+---
+
+If you accidently amend the last commit and want to get it back, use `git reflog show` to see history, then use something like `git reset HEAD@{1}` to get back changes in unstaged state and the commit where you did `git commit --amend` :)
+
+```
+---
+make a file executable in git `git update-index --chmod=+x foo.sh`
+---
+if you need to partially commit the change in file use command `git add -p`, this will open up interactive mode.
+
+Use `?` for help.
+---
+
+merge another branch(f-b) in current branch(mas) but squash all commits of(f-b) `git merge --squash f-b`
+
+---
+
+how/when to use git cherry-pick?
+
+you have multiple feature branch (fa, fb, fc) with multiple commits in each, you can't just simple merge them, as they will bring their own history, one way is to squash but you will have  merge commit,which doesn't looknice...
+
+
+you can do `git cherry-pick <commit hash of top commit on f-a>` simialr for merging f-b and f-c
+
+keep master clean.
+
+```
 
