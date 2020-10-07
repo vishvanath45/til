@@ -152,4 +152,10 @@ Use `git bisect` to find when was first time a bug was introduced, such a beauti
 https://git-scm.com/docs/git-bisect
 
 ---
- 
+
+`git reset --soft HEAD^` Will keep the modified changes in your working tree.
+
+`git reset --hard HEAD^`  WILL THROW AWAY THE CHANGES YOU MADE !!!
+
+----
+
