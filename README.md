@@ -2,9 +2,10 @@
 
 ## Will post stuff I learn during my day to day life
 
+---
 - Mounting a drive, instead of using UI, going to files and clicking files.
 
-### steps
+ steps
 
 - create a folder using command `mkdir /media/sharma/X`
 - find all the disks available using `sudo fdisk -l`
@@ -34,7 +35,7 @@
 
 ---
 
-- Never use `keys p_*` in production, it will block the incomming call while computation.
+- Never use `keys p_*` in production, it will block the incoming call while computation.
 
 - Use SCAN is recommended for production, so you can use something like:  
   `SCAN 0 COUNT 100 MATCH p_*`
@@ -67,7 +68,7 @@ do {
 ```
 
 ---
-If you need to remove the last commit but want to maintain changes ?
+If you need to remove the last commit but want to maintain changes
 ```
 git reset --soft HEAD^
 ```
@@ -83,12 +84,15 @@ whenever you create a unique constraint on table something like
 ALTER TABLE school_timing
     ADD CONSTRAINT unique_row_school_times UNIQUE (school_id,school_city, start_time);
 ```
+
 make sure to create a unique index on such combination while writing migration file, other we will fall into this error https://stackoverflow.com/a/54169587/6451546, in laymen terms, in above sample example, if you have a row with (school_id_A, lucknow, "08:00") and you delete it, later you can't add a row with same info, you would get not unique etc. error.
+
 ---
 
 to go to first line in file in vi `1 + G` mind the capital G
 
 to go to end of file  `G` mind the capital G.
+
 ---
 
 to commit only one file from list of staged files in git
@@ -116,22 +120,24 @@ a useful git command `git rebase -i HEAD~5
 
 ---
 
-If you accidently amend the last commit and want to get it back, use `git reflog show` to see history, then use something like `git reset HEAD@{1}` to get back changes in unstaged state and the commit where you did `git commit --amend` :)
+If you accidentally amend the last commit and want to get it back, use `git reflog show` to see history, then use something like `git reset HEAD@{1}` to get back changes in unstaged state and the commit where you did `git commit --amend` :)
 
-```
 ---
+
 make a file executable in git `git update-index --chmod=+x foo.sh`
+
 ---
 if you need to partially commit the change in file use command `git add -p`, this will open up interactive mode.
 
 Use `?` for help.
+
 ---
 
 merge another branch(f-b) in current branch(mas) but squash all commits of(f-b) `git merge --squash f-b`
 
 ---
 
-how/when to use git cherry-pick?
+How/when to use git cherry-pick?
 
 you have multiple feature branch (fa, fb, fc) with multiple commits in each, you can't just simple merge them, as they will bring their own history, one way is to squash but you will have  merge commit,which doesn't looknice...
 
@@ -145,11 +151,19 @@ keep master clean.
 Use `git rebase --onto` to rebase on any commit fromany commit on any branch, a really very good articl e https://womanonrails.com/git-rebase-onto
 
 ---
+
 Search through all changes using `git log -S`
+
 ---
 
 Use `git bisect` to find when was first time a bug was introduced, such a beautiful tool.
 https://git-scm.com/docs/git-bisect
 
 ---
- 
+
+`git reset --soft HEAD^` Will keep the modified changes in your working tree.
+
+`git reset --hard HEAD^`  WILL THROW AWAY THE CHANGES YOU MADE !!!
+
+----
+
