@@ -97,6 +97,7 @@ to go to end of file  `G` mind the capital G.
 
 to commit only one file from list of staged files in git
 `git commit --only filename` OR `git commit filename`
+
 ---
 visualize your git repo:
 
@@ -166,4 +167,11 @@ https://git-scm.com/docs/git-bisect
 `git reset --hard HEAD^`  WILL THROW AWAY THE CHANGES YOU MADE !!!
 
 ----
+
+get infomation of any file
+
+`file filename`
+
+----
+
 
