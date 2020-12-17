@@ -174,4 +174,13 @@ get infomation of any file
 
 ----
 
+use `time <command>` to miniter the time taken by command to execute
+
+----
+
+
+use `echo "same base64 decoded value" | base64 --decode` to decode the base64 message.
+
+----
+
 
