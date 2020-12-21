@@ -183,4 +183,14 @@ use `echo "same base64 decoded value" | base64 --decode` to decode the base64 me
 
 ----
 
+know status of service
+
+`service postgresql status`
+
+----
+
+Check for last login for users in remote/local client using command `last`
+
+----
+
 
