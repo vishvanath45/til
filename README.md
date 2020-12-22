@@ -193,4 +193,30 @@ Check for last login for users in remote/local client using command `last`
 
 ----
 
+Quickly set up a local server to mock a external http call
+
+```
+#     To run, use python3 main.py
+from flask import Flask
+import json
+
+app = Flask(__name__)
+
+@app.route('/')
+def example():
+   return {
+    "data": {
+        "message": "This is value of message key",
+        "user_type": "This is value of user type"
+    }
+}
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+just need to do `pip3 install flask` before running this file
+
+----
+
 
