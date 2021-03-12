@@ -219,4 +219,23 @@ just need to do `pip3 install flask` before running this file
 
 ----
 
+Check uptime of service
+
+`systemctl status <service_name>.service | grep Active`
+
+----
+
+how to export env variable from file
+
+`export $(xargs < ~/Downloads/env.integration)`
+
+----
+
+see bash history of other user
+
+`
+sudo vim /home/USER_YOU_WANT_TO_VIEW/.bash_history
+`
+
+----
 
