@@ -239,3 +239,6 @@ sudo vim /home/USER_YOU_WANT_TO_VIEW/.bash_history
 
 ----
 
+start rabbitmq server using command `rabbitmq-server` or `brew services start rabbitmq`
+
+----
