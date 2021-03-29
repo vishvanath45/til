@@ -97,6 +97,7 @@ to go to end of file  `G` mind the capital G.
 
 to commit only one file from list of staged files in git
 `git commit --only filename` OR `git commit filename`
+
 ---
 visualize your git repo:
 
@@ -167,3 +168,77 @@ https://git-scm.com/docs/git-bisect
 
 ----
 
+get infomation of any file
+
+`file filename`
+
+----
+
+use `time <command>` to miniter the time taken by command to execute
+
+----
+
+
+use `echo "same base64 decoded value" | base64 --decode` to decode the base64 message.
+
+----
+
+know status of service
+
+`service postgresql status`
+
+----
+
+Check for last login for users in remote/local client using command `last`
+
+----
+
+Quickly set up a local server to mock a external http call
+
+```
+#     To run, use python3 main.py
+from flask import Flask
+import json
+
+app = Flask(__name__)
+
+@app.route('/')
+def example():
+   return {
+    "data": {
+        "message": "This is value of message key",
+        "user_type": "This is value of user type"
+    }
+}
+
+if __name__ == '__main__':
+    app.run(port=5000)
+```
+
+just need to do `pip3 install flask` before running this file
+
+----
+
+Check uptime of service
+
+`systemctl status <service_name>.service | grep Active`
+
+----
+
+how to export env variable from file
+
+`export $(xargs < ~/Downloads/env.integration)`
+
+----
+
+see bash history of other user
+
+`
+sudo vim /home/USER_YOU_WANT_TO_VIEW/.bash_history
+`
+
+----
+
+start rabbitmq server using command `rabbitmq-server` or `brew services start rabbitmq`
+
+----
