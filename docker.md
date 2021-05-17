@@ -15,3 +15,9 @@ yes, abosolutely, Dockerfile is needed only when we need custom images, which ar
 Can i use dockerfile without docker-compose?
 
 yes, absolutely, when your application only needs all enviorment in single image, for example, if you have a python script, you can directly use python3 image and run your script from docker file only.
+
+Currently, I am only using docker file to build and deploy app(since i only need to run python script), problem I am facing
+
+- I need to rebuild the image and deploy for any code changes that I do in my python script.
+- Use different container name, since once a container is named, it can not be used again it seems, while it is excited, not removed.
+
