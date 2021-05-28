@@ -20,4 +20,12 @@ The filter function takes two arguments: a predicate function (f) and a sequence
 
 ---------------------------------
 
+(-> 3 (- 2)) ; It means (- 3 2)
+=> 1
+
+(->> 3 (- 2)) ; It means (- 2 3)
+=> -1
+
+---------------------------------
+
 
