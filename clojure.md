@@ -29,3 +29,7 @@ The filter function takes two arguments: a predicate function (f) and a sequence
 ---------------------------------
 
 
+@some-value is used to get the value of atom
+
+--------------------------------
+
