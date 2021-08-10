@@ -75,7 +75,6 @@ git reset --soft HEAD^
 ---
 
 If you need to ever create a foreign relation while creating a postgres migration, don't forget to include `ON DELETE CASCADE` you can't do it later, later you would need to delete child first then parent, and it would be tedious.
-
 ---
 
 whenever you create a unique constraint on table something like 
@@ -248,3 +247,14 @@ remember authentication checks credentials, authorization checks permissions
 ----
 
 
+port forwarding via openSSH
+
+ssh -L local_port:destination_server_ip:remote_port ssh_server_hostname
+
+------
+Go not able to run
+
+https://stackoverflow.com/questions/54966224/cant-run-go-permission-denied
+also see how to add user to group, interesting find
+
+------------
