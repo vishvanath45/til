@@ -258,3 +258,17 @@ https://stackoverflow.com/questions/54966224/cant-run-go-permission-denied
 also see how to add user to group, interesting find
 
 ------------
+ ALL < DEBUG < INFO < WARN < ERROR < FATAL < OFF. 
+-----------
+access elements in redis zset
+
+zrange <key> score_min(starting from 0) score_max(-1 for all cases) WITH_SCORES(in case you want to print scores also)
+
+----
+
+if we crate a new application id in kafka, it willstart from off set 0, data that it has in kafka queue in old data as well.
+----
+
+ESB : enterprise service bus, this is an architectural pattern whereby a centralized service component performs integration between applications. 
+
+
