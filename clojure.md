@@ -33,3 +33,6 @@ The filter function takes two arguments: a predicate function (f) and a sequence
 
 --------------------------------
 
+clojure resources
+https://www.youtube.com/watch?v=OUZZKtypink
+

@@ -1,7 +1,5 @@
 # Today I learned 
-
 ## Will post stuff I learn during my day to day life
-
 ---
 - Mounting a drive, instead of using UI, going to files and clicking files.
 
@@ -271,4 +269,16 @@ if we crate a new application id in kafka, it willstart from off set 0, data tha
 
 ESB : enterprise service bus, this is an architectural pattern whereby a centralized service component performs integration between applications. 
 
+
+---
+
+how to save ssh password for longer, use utility `ssh-add`
+
+---
+
+how to open emoji keyboard in mac : control + command + space
+
+---
+
+use `-p` flag in mkdir to not create directory if it already exists.
 
