@@ -282,3 +282,7 @@ how to open emoji keyboard in mac : control + command + space
 
 use `-p` flag in mkdir to not create directory if it already exists.
 
+---
+
+Life Principle : Leave place in a better place than you discovered it, be it in codebases or life situation or people you meet.
+`
