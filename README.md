@@ -1,7 +1,5 @@
 # Today I learned 
-
 ## Will post stuff I learn during my day to day life
-
 ---
 - Mounting a drive, instead of using UI, going to files and clicking files.
 
@@ -75,7 +73,6 @@ git reset --soft HEAD^
 ---
 
 If you need to ever create a foreign relation while creating a postgres migration, don't forget to include `ON DELETE CASCADE` you can't do it later, later you would need to delete child first then parent, and it would be tedious.
-
 ---
 
 whenever you create a unique constraint on table something like 
@@ -242,3 +239,55 @@ sudo vim /home/USER_YOU_WANT_TO_VIEW/.bash_history
 start rabbitmq server using command `rabbitmq-server` or `brew services start rabbitmq`
 
 ----
+
+remember authentication checks credentials, authorization checks permissions
+
+----
+
+
+port forwarding via openSSH
+
+ssh -L local_port:destination_server_ip:remote_port ssh_server_hostname
+
+------
+Go not able to run
+
+https://stackoverflow.com/questions/54966224/cant-run-go-permission-denied
+also see how to add user to group, interesting find
+
+------------
+ ALL < DEBUG < INFO < WARN < ERROR < FATAL < OFF. 
+-----------
+access elements in redis zset
+
+zrange <key> score_min(starting from 0) score_max(-1 for all cases) WITH_SCORES(in case you want to print scores also)
+
+----
+
+if we crate a new application id in kafka, it willstart from off set 0, data that it has in kafka queue in old data as well.
+----
+
+ESB : enterprise service bus, this is an architectural pattern whereby a centralized service component performs integration between applications. 
+
+
+---
+
+how to save ssh password for longer, use utility `ssh-add`
+
+---
+
+how to open emoji keyboard in mac : control + command + space
+
+---
+
+use `-p` flag in mkdir to not create directory if it already exists.
+
+---
+
+Life Principle : Leave place in a better place than you discovered it, be it in codebases or life situation or people you meet.
+`
+----
+
+dictionaries are also called hashmap or key value structure
+
+----`
