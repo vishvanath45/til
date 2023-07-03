@@ -291,3 +291,13 @@ Life Principle : Leave place in a better place than you discovered it, be it in 
 dictionaries are also called hashmap or key value structure
 
 ----`
+why add new line at end of file?
+
+* historically the decision was made during C lang standard and many Unix tools expect to work correctly
+* line means -> sequence of zero or non-new line and terminating newline char. (if we don't add new line, its not a line)
+* unix benifits, cat displays correctly for file ending in new line
+* wc -l won't count last line if it doesn't has new line.
+----
+
+Predicate functions are functions that return a single TRUE or FALSE .
+----
