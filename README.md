@@ -301,3 +301,27 @@ why add new line at end of file?
 
 Predicate functions are functions that return a single TRUE or FALSE .
 ----
+List all running services `systemctl --type=service --state=running`
+---------
+
+atomic operations: either they will run completely or not at all. for ex: a process having multiple step is not atomic, as 1 step may happen and then it can fail. but atomic operation are most small unit of work that can be done.
+
+
+--- 
+
+Diff between heap and stack
+
+- Heap is explicitely defined by programmer and not cleared automatically, not to be confused with Heap data structure.
+- Every time we create a obejct, it is store in heap and reference is stored in Stack.
+- GC runs on Heap, Stack doesn't need GC because Stack has First in Last out, as soon as func call ends, the variable goes out of stack, thus free, since we don't know which variable to remove, that's why GC runs on HEAP.
+- If heap is full we get OutOfMemoryError, if stack is full we get StackOverflow error.
+
+
+---
+
+GO lang
+
+func (a ABC) DoSomething(input ) output 
+
+here ABC is called function reciever
+

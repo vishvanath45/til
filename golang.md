@@ -1,3 +1,9 @@
+go lang
+
+* general purpose language
+* not oops language, no concept of class
+* struct are declared in heap
+
 ## Difference between object creation using new and manual writing.
 
 
