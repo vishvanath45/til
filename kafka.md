@@ -14,3 +14,10 @@ Keywords:
 	- consumer API
 	- streams API(for doing high level transformation, like converting local time to UTC, or high level functions)
 	- 
+
+Learning from setting running kafka in CI
+
+- Topics needs to be created first before subscribing to it (service can only run after this step)
+- Pub and sub port can be same
+- we can even set up local running kafka and publish and consume message in what ever way we want, in plain text, proto or whatever.
+- we can reply the msg from certain offset too,

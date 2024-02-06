@@ -1,0 +1,8 @@
+Analysing tile38 as possibility for geo spatial data base
+
+the queries we get
+- insert location of driver with driver id
+- give me recent location of driver. 
+
+- saves in type hash, but hgetall doesn't work
+

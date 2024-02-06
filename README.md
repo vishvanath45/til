@@ -291,3 +291,67 @@ Life Principle : Leave place in a better place than you discovered it, be it in 
 dictionaries are also called hashmap or key value structure
 
 ----`
+why add new line at end of file?
+
+* historically the decision was made during C lang standard and many Unix tools expect to work correctly
+* line means -> sequence of zero or non-new line and terminating newline char. (if we don't add new line, its not a line)
+* unix benifits, cat displays correctly for file ending in new line
+* wc -l won't count last line if it doesn't has new line.
+----
+
+Predicate functions are functions that return a single TRUE or FALSE .
+----
+List all running services `systemctl --type=service --state=running`
+---------
+
+atomic operations: either they will run completely or not at all. for ex: a process having multiple step is not atomic, as 1 step may happen and then it can fail. but atomic operation are most small unit of work that can be done.
+
+
+--- 
+
+Diff between heap and stack
+
+- Heap is explicitely defined by programmer and not cleared automatically, not to be confused with Heap data structure.
+- Every time we create a obejct, it is store in heap and reference is stored in Stack.
+- GC runs on Heap, Stack doesn't need GC because Stack has First in Last out, as soon as func call ends, the variable goes out of stack, thus free, since we don't know which variable to remove, that's why GC runs on HEAP.
+- If heap is full we get OutOfMemoryError, if stack is full we get StackOverflow error.
+
+
+---
+
+GO lang
+
+func (a ABC) DoSomething(input ) output 
+
+here ABC is called function reciever
+
+---
+
+Golang
+
+defer : used to execute the func at the last of untill all current function is completed.
+Interesting note is that: the arguments are evaluated immediately, bt actual function call is done later. 
+
+```
+defer fmt.Println("Defer World time ", time.Now().UnixNano())
+for i := 0; i < 1000000; i++ {
+	///
+}
+fmt.Println("Hello World time ", time.Now().UnixNano())
+```
+
+so here the defer world time is early then hello world time, the reason being the argument of defer world time is executed first. 
+
+the defer is helpful while computing latencies
+
+```
+defer reporter.ReportAPILatency(r.Method, r.URL.Path, getRawQuery(r), time.Now())
+next.ServeHTTP(w, r)
+```
+
+So, the time.Now() is evaluated,and the reportAPILatency function later can just subtract from currentTime and get latency.
+
+--------
+
+
+
