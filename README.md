@@ -325,3 +325,33 @@ func (a ABC) DoSomething(input ) output
 
 here ABC is called function reciever
 
+---
+
+Golang
+
+defer : used to execute the func at the last of untill all current function is completed.
+Interesting note is that: the arguments are evaluated immediately, bt actual function call is done later. 
+
+```
+defer fmt.Println("Defer World time ", time.Now().UnixNano())
+for i := 0; i < 1000000; i++ {
+	///
+}
+fmt.Println("Hello World time ", time.Now().UnixNano())
+```
+
+so here the defer world time is early then hello world time, the reason being the argument of defer world time is executed first. 
+
+the defer is helpful while computing latencies
+
+```
+defer reporter.ReportAPILatency(r.Method, r.URL.Path, getRawQuery(r), time.Now())
+next.ServeHTTP(w, r)
+```
+
+So, the time.Now() is evaluated,and the reportAPILatency function later can just subtract from currentTime and get latency.
+
+--------
+
+
+
